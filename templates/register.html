@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Registrazione</h2>
+
+<form method="POST">
+  <div>
+    <label for="email">Email</label><br>
+    <input type="email" id="email" name="email" placeholder="Inserisci la tua email" required>
+  </div>
+
+  <div>
+    <label for="password">Password</label><br>
+    <input type="password" id="password" name="password" placeholder="Crea una password" required>
+  </div>
+
+  <div>
+    <label for="confirm_password">Conferma Password</label><br>
+    <input type="password" id="confirm_password" name="confirm_password" placeholder="Ripeti la password" required>
+  </div>
+
+  <button type="submit">Registrati</button>
+</form>
+
+<p>Hai già un account? <a href="{{ url_for('login') }}">Accedi qui</a></p>
+{% endblock %}
