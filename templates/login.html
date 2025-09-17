@@ -1,21 +1,16 @@
 {% extends "base.html" %}
-
 {% block content %}
-<h2>Accesso</h2>
+<div class="form-container">
+  <h2>Accesso</h2>
+  <form method="POST">
+    <label for="username">Nome utente</label>
+    <input type="text" id="username" name="username" required>
 
-<form method="POST">
-  <div>
-    <label for="email">Email</label><br>
-    <input type="email" id="email" name="email" placeholder="Inserisci la tua email" required>
-  </div>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
 
-  <div>
-    <label for="password">Password</label><br>
-    <input type="password" id="password" name="password" placeholder="Inserisci la password" required>
-  </div>
-
-  <button type="submit">Accedi</button>
-</form>
-
-<p>Non hai ancora un account? <a href="{{ url_for('register') }}">Registrati qui</a></p>
+    <button type="submit">Accedi</button>
+  </form>
+  <p>Non hai ancora un account? <a href="{{ url_for('register') }}">Registrati qui</a>.</p>
+</div>
 {% endblock %}
