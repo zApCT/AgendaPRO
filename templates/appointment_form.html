@@ -8,7 +8,7 @@
   </label>
   <div class="grid2">
     <label>Data*
-      <input type="date" name="date" value="{{ appt.start_at.strftime('%Y-%m-%d') if appt else '' }}" required>
+      <input type="date" name="date" value="{{ appt.start_at.strftime('%d-%m-%Y') if appt else '' }}" required>
     </label>
     <label>Inizio*
       <input type="time" name="start_time" value="{{ appt.start_at.strftime('%H:%M') if appt else '' }}" required>
